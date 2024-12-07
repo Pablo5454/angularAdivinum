@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos uno debajo del otro */
+  // align-items: center;   /* Centra horizontalmente */
+  // justify-content: center; /* Centra verticalmente */
+  // height: 100vh;         /* Altura completa de la pantalla */
+  text-align: center;    /* Centra el texto dentro de los elementos */
+}
+#buttons{
+  padding: 10px;
+}
+div{
+  background-color: lightblue;
+}

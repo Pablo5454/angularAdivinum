@@ -1,0 +1,26 @@
+<h2>ADIVINA UN NÚMERO ENTRE 0 Y 50</h2>
+<button (click)="generarNumero()">GENERAR NÚMERO</button>
+<input [(ngModel)]="numeroGenerado"/>
+<p>El número es: {{numeroGenerado}}</p>
+
+<div *ngIf="mostrarFormulario"> <!--Muestra el formulario si mostrarFormulario es true-->
+  <h3>Elige un número</h3>
+  <input [(ngModel)]="numeroIntroducido" type="number"> <!--ngModel mantiene una comunicación bidireccional-->
+
+    <button (click) = "adivinarNumero()">COMPROBAR</button>
+    <table border="1" style="margin: 0 auto; text-align: center; border-collapse: collapse; width: 50%;">
+      <thead>
+        <tr>
+          <th>Intento</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let resultado of resultados; let i = index"><!--Genera las filas de la tabla según el array resultados-->
+          <td>{{ i + 1 }}</td>
+          <td>{{ resultado }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
